@@ -106,7 +106,7 @@ Singleton {
 
             property JsonObject appearance: JsonObject {
                 property bool extraBackgroundTint: true
-                property int fakeScreenRounding: 2 // 0: None | 1: Always | 2: When not fullscreen
+                property int fakeScreenRounding: 0 // 0: None | 1: Always | 2: When not fullscreen
                 property JsonObject fonts: JsonObject {
                     property string main: "Google Sans Flex"
                     property string numbers: "Google Sans Flex"
@@ -130,7 +130,7 @@ Singleton {
                         property real harmony: 0.6
                         property real harmonizeThreshold: 100
                         property real termFgBoost: 0.35
-                        property bool forceDarkMode: false
+                        property bool forceDarkMode: true
                     }
                 }
                 property JsonObject palette: JsonObject {
@@ -166,7 +166,7 @@ Singleton {
                     property JsonObject clock: JsonObject {
                         property bool enable: true
                         property bool showOnlyWhenLocked: false
-                        property string placementStrategy: "leastBusy" // "free", "leastBusy", "mostBusy"
+                        property string placementStrategy: "free" // "free", "leastBusy", "mostBusy"
                         property real x: 100
                         property real y: 100
                         property string style: "cookie"        // Options: "cookie", "digital"
@@ -204,7 +204,7 @@ Singleton {
                         }
                     }
                     property JsonObject weather: JsonObject {
-                        property bool enable: false
+                        property bool enable: true
                         property string placementStrategy: "free" // "free", "leastBusy", "mostBusy"
                         property real x: 400
                         property real y: 100
@@ -234,7 +234,7 @@ Singleton {
                     }
                 }
                 property bool bottom: false // Instead of top
-                property int cornerStyle: 0 // 0: Hug | 1: Float | 2: Plain rectangle
+                property int cornerStyle: 1 // 0: Hug | 1: Float | 2: Plain rectangle
                 property bool floatStyleShadow: true // Show shadow behind bar when cornerStyle == 1 (Float)
                 property bool borderless: false // true for no grouping of items
                 property string topLeftIcon: "spark" // Options: "distro" or any icon name in ~/.config/quickshell/ii/assets/icons
@@ -259,7 +259,7 @@ Singleton {
                     property bool showScreenRecord: false
                 }
                 property JsonObject workspaces: JsonObject {
-                    property bool monochromeIcons: true
+                    property bool monochromeIcons: false
                     property int shown: 10
                     property bool showAppIcons: true
                     property bool alwaysShowNumbers: false
@@ -323,8 +323,8 @@ Singleton {
             }
 
             property JsonObject dock: JsonObject {
-                property bool enable: false
-                property bool monochromeIcons: true
+                property bool enable: true
+                property bool monochromeIcons: false
                 property real height: 60
                 property real hoverRegionHeight: 2
                 property bool pinnedOnStartup: false
@@ -536,7 +536,7 @@ Singleton {
                 }
 
                 property JsonObject quickSliders: JsonObject {
-                    property bool enable: false
+                    property bool enable: true
                     property bool showMic: false
                     property bool showVolume: true
                     property bool showBrightness: true
@@ -552,7 +552,7 @@ Singleton {
             }
 
             property JsonObject sounds: JsonObject {
-                property bool battery: false
+                property bool battery: true
                 property bool pomodoro: false
                 property string theme: "freedesktop"
             }
