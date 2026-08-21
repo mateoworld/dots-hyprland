@@ -19,11 +19,12 @@ hl.config({
         no_update_news = true -- disable update popup
     },
     gestures = {
-        -- Touchscreen workspace switching. hl.gesture() above is trackpad-only
-        -- (Hyprland's gesture system lives under input/trackpad), and hyprgrass,
-        -- which used to provide multi-finger touch gestures, no longer builds
-        -- against Hyprland 0.55+. This is the native replacement: an edge swipe
-        -- rather than a multi-finger one, and off by default.
+        -- Touchscreen workspace switching. The hl.gesture() calls in
+        -- hyprland/general.lua are trackpad-only (Hyprland's gesture system
+        -- lives under input/trackpad), and hyprgrass, which used to provide
+        -- multi-finger touch gestures, no longer builds against Hyprland 0.55+.
+        -- This is the native replacement: an edge swipe rather than a
+        -- multi-finger one, and off by default.
         workspace_swipe_touch = true
     },
     general = {
